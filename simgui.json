@@ -1,1 +1,21 @@
-{}
+{
+  "HALProvider": {
+    "Addressable LEDs": {
+      "0": {
+        "columns": 2
+      },
+      "window": {
+        "visible": true
+      }
+    }
+  },
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/Shuffleboard/Robot/Auton Selection": "String Chooser",
+      "/SmartDashboard/Elevator Sim": "Mechanism2d",
+      "/SmartDashboard/Field": "Field2d",
+      "/SmartDashboard/Scheduler": "Scheduler"
+    }
+  }
+}
