@@ -40,6 +40,7 @@ public class Drivetrain extends SubsystemBase {
         diffDrive.arcadeDrive(xaxisSpeed, zaxisRotate);
     }
 
+    // Stop the drivetrain
     public void stop() {
         diffDrive.stopMotor();
     }

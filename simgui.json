@@ -8,6 +8,16 @@
         "visible": true
       }
     },
+    "Encoders": {
+      "0": {
+        "header": {
+          "open": true
+        }
+      },
+      "window": {
+        "visible": true
+      }
+    },
     "PWM Outputs": {
       "window": {
         "visible": true
@@ -29,9 +39,29 @@
         }
       },
       "/SmartDashboard/Field": {
+        "image": "C:\\github\\Romi-3847-2023\\pathplanner\\data\\flutter_assets\\images\\field22.png",
         "window": {
           "visible": true
         }
+      }
+    }
+  },
+  "NetworkTables": {
+    "transitory": {
+      "FMSInfo": {
+        "open": true
+      },
+      "LiveWindow": {
+        "open": true
+      },
+      "Shuffleboard": {
+        "open": true
+      },
+      "SmartDashboard": {
+        "Alerts": {
+          "open": true
+        },
+        "open": true
       }
     }
   }

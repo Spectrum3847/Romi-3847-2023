@@ -2,7 +2,7 @@ package frc.robot.elevatorSim;
 
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.wpilibj.Encoder;
-import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
+import edu.wpi.first.wpilibj.motorcontrol.Spark;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Elevator extends SubsystemBase {
@@ -11,7 +11,7 @@ public class Elevator extends SubsystemBase {
     // Standard classes for controlling our elevator
     public final PIDController m_controller;
     public final Encoder m_encoder;
-    public final PWMSparkMax m_motor;
+    public final Spark m_motor;
     public final ElevatorSimulator elevatorSim;
 
     /** Creates a new ElevatorSim. */
@@ -19,7 +19,7 @@ public class Elevator extends SubsystemBase {
         config = new ElevatorConfig();
         m_controller = new PIDController(config.kElevatorKp, 0, 0);
         m_encoder = new Encoder(config.kEncoderAChannel, config.kEncoderBChannel);
-        m_motor = new PWMSparkMax(config.kMotorPort);
+        m_motor = new Spark(config.kMotorPort);
 
         m_encoder.setDistancePerPulse(config.kElevatorEncoderDistPerPulse);
 
