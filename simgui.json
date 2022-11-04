@@ -7,6 +7,11 @@
       "window": {
         "visible": true
       }
+    },
+    "PWM Outputs": {
+      "window": {
+        "visible": true
+      }
     }
   },
   "NTProvider": {
@@ -16,6 +21,18 @@
       "/SmartDashboard/Elevator Sim": "Mechanism2d",
       "/SmartDashboard/Field": "Field2d",
       "/SmartDashboard/Scheduler": "Scheduler"
+    },
+    "windows": {
+      "/SmartDashboard/Elevator Sim": {
+        "window": {
+          "visible": true
+        }
+      },
+      "/SmartDashboard/Field": {
+        "window": {
+          "visible": true
+        }
+      }
     }
   }
 }

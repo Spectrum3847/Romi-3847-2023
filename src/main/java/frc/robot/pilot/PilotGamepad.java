@@ -47,7 +47,7 @@ public class PilotGamepad extends Gamepad {
     }
 
     public double getDriveSteering() {
-        return steeringCurve.calculateMappedVal(this.gamepad.rightStick.getX());
+        return -1 * steeringCurve.calculateMappedVal(this.gamepad.rightStick.getX());
     }
 
     public void rumble(double intensity) {

@@ -1,10 +1,14 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.DataLogManager;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.SpectrumLib.sim.PhysicsSim;
+import frc.SpectrumLib.util.Network;
 import frc.robot.auton.AutonSetup;
 import frc.robot.drivetrain.Drivetrain;
 import frc.robot.drivetrain.commands.DrivetrainCommands;
@@ -84,12 +88,12 @@ public class Robot extends TimedRobot {
     @Override
     public void robotInit() {
         // Start the DataLogger and log DS values
-        // DataLogManager.start();
-        // DriverStation.startDataLog(DataLogManager.getLog());
+        DataLogManager.start();
+        DriverStation.startDataLog(DataLogManager.getLog());
 
         // Set the MAC Address for this robot, useful for adjusting comp/practice bot settings*/
-        // MAC = Network.getMACaddress();
-        // Shuffleboard.getTab("Robot"); // Makes the Robot tab the first tab on the Shuffleboard
+        MAC = Network.getMACaddress();
+        Shuffleboard.getTab("Robot"); // Makes the Robot tab the first tab on the Shuffleboard
         intializeSubsystems();
     }
 
