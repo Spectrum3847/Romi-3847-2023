@@ -39,7 +39,6 @@
         }
       },
       "/SmartDashboard/Field": {
-        "image": "C:\\github\\Romi-3847-2023\\pathplanner\\data\\flutter_assets\\images\\field22.png",
         "window": {
           "visible": true
         }
