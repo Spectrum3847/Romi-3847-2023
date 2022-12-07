@@ -1,6 +1,7 @@
 package frc.robot.elevatorSim;
 
 import edu.wpi.first.math.controller.PIDController;
+import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.motorcontrol.Spark;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -32,7 +33,9 @@ public class Elevator extends SubsystemBase {
     }
 
     public void goToTarget(int height) {
-        double pidOutput = m_controller.calculate(m_encoder.getDistance(), height);
+        double pidOutput =
+                m_controller.calculate(m_encoder.getDistance(), Units.inchesToMeters(height));
+        pidOutput = pidOutput + config.kElevatorKf;
         m_motor.setVoltage(pidOutput);
     }
 

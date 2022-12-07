@@ -10,6 +10,7 @@ public class ElevatorConfig {
     public final int kEncoderBChannel = 9;
 
     public final double kElevatorKp = 5.0;
+    public final double kElevatorKf = 0.9;
     public final double kElevatorGearing = 10.0;
     public final double kElevatorDrumRadius = Units.inchesToMeters(2.0);
     public final double kCarriageMass = 4.0; // kg
