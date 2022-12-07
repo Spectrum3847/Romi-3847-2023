@@ -2,14 +2,13 @@ package frc.robot.leds.commands;
 
 import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.Robot;
 
 /** All of the commands to schedule LEDs */
 public class LEDCommands {
 
     public static void setupDefaultCommand() {
-        Robot.leds.scheduler.setDefaultAnimation(
-                "Default LEDs", new BlinkLEDCommand(Color.kPurple));
+        // Robot.leds.scheduler.setDefaultAnimation(
+        //        "Default LEDs", new BlinkLEDCommand(Color.kPurple));
     }
 
     public static Command blink(Color color, String name, int priority, int timeout) {

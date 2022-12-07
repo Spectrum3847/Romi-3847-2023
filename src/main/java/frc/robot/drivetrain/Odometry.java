@@ -35,7 +35,7 @@ public class Odometry {
 
     // Field Odometry and Simulation things
     public final DifferentialDriveOdometry diffOdometry =
-            new DifferentialDriveOdometry(Rotation2d.fromDegrees(0));
+            new DifferentialDriveOdometry(Rotation2d.fromDegrees(0), 0, 0);
 
     public Odometry(Drivetrain dt) {
         drivetrain = dt;
@@ -74,7 +74,7 @@ public class Odometry {
         rightEncoder.reset();
         resetGyro();
         drivetrain.driveSim.resetSimOdometry();
-        diffOdometry.resetPosition(pose, Rotation2d.fromDegrees(0));
+        diffOdometry.resetPosition(Rotation2d.fromDegrees(0), 0, 0, pose);
     }
 
     /** Resets robot odometry. */

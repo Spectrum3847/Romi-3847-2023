@@ -32,7 +32,7 @@ import frc.robot.pilot.PilotGamepad;
  */
 public class Robot extends TimedRobot {
     public static RobotConfig config;
-    // public static RobotTelemetry telemetry;
+    public static RobotTelemetry telemetry;
     public static Drivetrain drivetrain;
     public static OnBoardIO onboardIO;
     public static LEDs leds;
@@ -61,7 +61,7 @@ public class Robot extends TimedRobot {
         leds = new LEDs();
         onboardIO = new OnBoardIO(ChannelMode.INPUT, ChannelMode.INPUT);
         pilotGamepad = new PilotGamepad();
-        // telemetry = new RobotTelemetry();
+        telemetry = new RobotTelemetry();
 
         // Set Default Commands, this method should exist for each subsystem that has commands
         DrivetrainCommands.setupDefaultCommand();

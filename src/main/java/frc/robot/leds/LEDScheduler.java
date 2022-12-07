@@ -24,7 +24,7 @@ public class LEDScheduler {
     }
 
     public void setDefaultAnimation(String name, LEDCommandBase command) {
-        defaultAnimation = new Animation(name, command, 2, -101);
+        defaultAnimation = new Animation(name, command, 1, -101);
         if (top == null) {
             top = defaultAnimation;
         }
@@ -32,7 +32,7 @@ public class LEDScheduler {
     }
 
     private void intialAnimation() {
-        setDefaultAnimation("Default LED Animation", new BlinkLEDCommand(Color.kWhite));
+        setDefaultAnimation("Default LED Animation", new BlinkLEDCommand(Color.kPurple));
     }
 
     private void runScheduler() {
@@ -74,8 +74,8 @@ public class LEDScheduler {
         top.getCommand().ledExecute();
     }
 
-    public void addAnimation(String name, LEDCommandBase command, int priority, double timeout) {
-        Animation animation = new Animation(name, command, priority, timeout);
+    public void addAnimation(String name, LEDCommandBase command, int priority, double seconds) {
+        Animation animation = new Animation(name, command, priority, seconds * 5);
         addAnimation(animation);
     }
 
@@ -159,7 +159,7 @@ public class LEDScheduler {
                         public void run() {
                             while (true) {
                                 runScheduler();
-                                Timer.delay(0.2); // Loop runs at 20hz
+                                Timer.delay(0.2); // Loop runs at 5hz
                             }
                         }
                     });

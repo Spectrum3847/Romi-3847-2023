@@ -30,14 +30,14 @@ public class PilotGamepad extends Gamepad {
         gamepad.aButton.whileTrue(ElevatorCommands.goToHeight(30));
         gamepad.bButton.whileTrue(
                 IntakeCommands.intakePieces()
-                        .alongWith(LEDCommands.blink(Color.kYellow, "Yellow", 10, 5)));
+                        .alongWith(LEDCommands.blink(Color.kYellow, "Yellow", 10, 2).repeatedly()));
     }
 
     public void setupDisabledButtons() {
-        gamepad.aButton.whileTrue(LEDCommands.solidColor(Color.kGreen, "Green", 5, 5));
-        gamepad.bButton.whileTrue(LEDCommands.blink(Color.kBlue, "Blink Blue", 10, 5));
-        gamepad.xButton.whileTrue(LEDCommands.rainbow("Rainbow", 15, 5));
-        gamepad.yButton.whileTrue(LEDCommands.snowfall("Snowfall", 20, 5));
+        gamepad.aButton.whileTrue(LEDCommands.solidColor(Color.kGreen, "Green", 5, 2).repeatedly());
+        gamepad.bButton.whileTrue(LEDCommands.blink(Color.kBlue, "Blink Blue", 10, 2).repeatedly());
+        gamepad.xButton.whileTrue(LEDCommands.rainbow("Rainbow", 15, 2).repeatedly());
+        gamepad.yButton.whileTrue(LEDCommands.snowfall("Snowfall", 20, 2).repeatedly());
     }
 
     public void setupTestButtons() {}
